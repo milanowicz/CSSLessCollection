@@ -1,7 +1,7 @@
 /**
  * Author: Milanowicz
  * Date: 2014
- * Version: 0.6.7
+ * Version: 0.6.8
  *
  * Description:
  * To compile less files are Less v1.7 required !
@@ -105,7 +105,7 @@
 
 .BackgroundImage (@Filename, @Width: auto, @Height: auto) {
   background-image: url(@Filename);
-  @BigImage: ~`@{Filename}.replace(/\.\w+$/, function(match) { return @BigPictureExtension + match; })`;
+  @BigImage: ~`@{Filename}.replace(/\.\w+$/, function(match) { return @{BigPictureExtension} + match; })`;
   .BackgroundSize(@Width @Height);
 
   @media @HighDpi {
