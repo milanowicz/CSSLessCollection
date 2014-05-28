@@ -1,17 +1,13 @@
-/**
- * Author: Milanowicz
- * Date: 2014
- * Version: 0.6.8
- *
- * Description:
- * To compile less files are Less v1.7 required !
- */
-@import 'CSSLessCollectionDefinitions';
+// File: CSSLessCollectionMixins.less
+// Author: Milanowicz
+// Date: 2014
+// Version: 0.6.9
+// Description: This Toolkit Less file required the Less Version 1.7!
 
-/**########################################################
- * ##               Less Mixin Toolkit File              ##
- * ########################################################
- */
+
+//########################################################
+//##               Less Mixin Toolkit File              ##
+//########################################################
 
 .FontFace (@FontName, @FontFile,
            @FontWeight: @FontWeight,
@@ -29,8 +25,9 @@
   }
 }
 
-
-/* Font Style Mixins */
+//################################
+//##      Font Style Mixins     ##
+//################################
 .Text (@FontFamily,
        @FontSize: @FontSize,
        @Color: @ColorBlack,
@@ -75,7 +72,9 @@
 }
 
 
-/* HTML Helper */
+//################################
+//##          HTML Helper       ##
+//################################
 
 .OutlineBorder () {
   border: 0 none;
@@ -88,7 +87,9 @@
 }
 
 
-/* Background Image or Icon mixins */
+//#######################################
+//##  Background Image or Icon mixins  ##
+//#######################################
 
 .BackgroundOpacity (@Color: @BackgroundColor, @Opacity: @Opacity) {
   
@@ -169,7 +170,9 @@
 }
 
 
-/* HTML Box Styles */
+//################################
+//##        HTML Box Styles     ##
+//################################
 
 .BoxSize (@Size) {
   width: @Size;
@@ -264,7 +267,9 @@
 }
 
 
-/* HTML5 Flexbox */
+//################################
+//##       HTML5 Flexbox        ##
+//################################
 
 .Flexbox () {
   display: -webkit-box;
@@ -291,7 +296,10 @@
 }
 
 
-/* CSS3 Animation, Transform and Transition mixins */
+//################################
+//##         CSS3 Animation     ##
+//##  Transform and Transition  ##
+//################################
 
 .Animation (...) {
   -webkit-animation: @arguments;
@@ -401,7 +409,9 @@
 }
 
 
-/* HTML Forms */
+//################################
+//##        HTML Forms          ##
+//################################
 
 .FormPlaceholderColor (@Color: @ColorBlack) {
   &::-webkit-input-placeholder {

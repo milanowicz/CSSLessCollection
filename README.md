@@ -3,6 +3,14 @@ CSS Less Collection
 
 Less v1.7 is required to compile the Toolkit without errors.
 
+Import this two files to work with it.
+
+    @import 'CSSLessCollectionDefinitions';
+	
+Overwrite Less variables here, if you need to.
+
+    @import 'CSSLessCollectionMixins';
+
 
 CSSLessCollectionMixins.less
 -------------
