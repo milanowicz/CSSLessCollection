@@ -1,6 +1,9 @@
 {
   "name": "CSSLessCollection",
-  "version": "0.6.7",
-  "dependencies": {},
-  "devDependencies": {}
+  "version": "0.6.9",
+  "ignore": [
+    ".gitignore",
+    "bower.json",
+    "README.md"
+  ]
 }
