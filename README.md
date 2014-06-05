@@ -1,5 +1,4 @@
-CSS Less Collection
-================
+# CSS Less Collection
 
 Less v1.7 is required to compile the Toolkit without errors.
 
@@ -12,14 +11,12 @@ Overwrite Less variables here, if you need to.
     @import 'CSSLessCollectionMixins';
 
 
-CSSLessCollectionMixins.less
--------------
+## CSSLessCollectionMixins.less
 
 Less Mixin Toolkit for generate CSS2/3 StyleSheet files.
 
 
-CSSLessCollectionDefinitions.less
--------------
+## CSSLessCollectionDefinitions.less
 
 Change in what you need or not ;-)
 
@@ -63,3 +60,14 @@ Change in what you need or not ;-)
     @ScaleRatio: 1.5;
     @TransitionDuration: 0.2s;
     @TransitionEase: ease-out;
+
+
+# Bower
+
+Install Bower at the first time when you never used it before.
+
+    $ npm install -g bower
+
+Install via Bower
+
+    $ bower install CSSLessCollection
