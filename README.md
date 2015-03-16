@@ -58,8 +58,6 @@ Change in what you need or not ;-)
     @Opacity: 0.5;
     @RotationDeg: 5deg;
     @ScaleRatio: 1.5;
-    @TransitionDuration: 0.2s;
-    @TransitionEase: ease-out;
 
 
 # Bower
