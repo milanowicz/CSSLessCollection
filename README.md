@@ -56,8 +56,6 @@ Change in what you need or not ;-)
     @GradientStartColor: #ccc;
     @GradientEndColor: #fff;
     @Opacity: 0.5;
-    @RotationDeg: 5deg;
-    @ScaleRatio: 1.5;
 
 
 # Bower

@@ -1,7 +1,7 @@
 // File: CSSLessCollectionMixins.less
 // Author: Milanowicz
 // Date: 2015
-// Version: 0.7.0
+// Version: 0.7.1
 // Description: This Toolkit Less file required the Less Version 1.7!
 
 
@@ -75,6 +75,17 @@
 //################################
 //##          HTML Helper       ##
 //################################
+
+.ClearFix () {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
 
 .OutlineBorder () {
   border: 0 none;
@@ -281,10 +292,64 @@
 
 .Flexbox (...) {
   -webkit-box-flex: @arguments;
-  -moz-box-flex:  @arguments;
-  -webkit-flex:  @arguments;
-  -ms-flex:  @arguments;
-  flex:  @arguments;
+  -moz-box-flex: @arguments;
+  -webkit-flex: @arguments;
+  -ms-flex: @arguments;
+  flex: @arguments;
+}
+
+.FlexboxAlignContent (...) {
+  -webkit-align-content: @arguments;
+  -moz-align-content: @arguments;
+  -ms-align-content: @arguments;
+  align-content: @arguments;
+}
+
+.FlexboxAlignItems (...) {
+  -ms-flex-align :@arguments;
+  -webkit-align-items :@arguments;
+  align-items: @arguments;
+}
+
+.FlexboxAlignSelf (...) {
+  -ms-flex-align-self: @arguments;
+  -webkit-align-self: @arguments;
+  align-self: @arguments;
+}
+
+.FlexboxBasis (@Width: auto) {
+  -webkit-flex-basis: @Width;
+  -moz-flex-basis: @Width;
+  -ms-flex-basis: @Width;
+  flex-basis: @Width;
+}
+
+.FlexboxDirection (@Direction: row) {
+  -webkit-flex-direction: @Direction;
+  -moz-flex-direction: @Direction;
+  -ms-flex-direction: @Direction;
+  flex-direction: @Direction;
+}
+
+.FlexboxFlow (...) {
+  -webkit-flex-flow: @arguments;
+  -moz-flex-flow: @arguments;
+  -ms-flex-flow: @arguments;
+  flex-flow: @arguments;
+}
+
+.FlexboxJustifyContent (...) {
+  -webkit-justify-content: @arguments;
+  -moz-justify-content: @arguments;
+  -ms-justify-content: @arguments;
+  justify-content: @arguments;
+}
+
+.FlexboxGrow (@Grow: 0) {
+  -webkit-flex-grow: @Grow;
+  -moz-flex-grow: @Grow;
+  -ms-flex-grow: @Grow;
+  flex-grow: @Grow;
 }
 
 .FlexboxOrder (...) {
@@ -293,6 +358,20 @@
   -ms-flex-order: @arguments;
   -webkit-order: @arguments;
   order: @arguments;
+}
+
+.FlexboxShrink (@Shrink: 1) {
+  -webkit-flex-shrink: @Shrink;
+  -moz-flex-shrink: @Shrink;
+  -ms-flex-shrink: @Shrink;
+  flex-shrink: @Shrink;
+}
+
+.FlexWrap (@Wrap: nowrap) {
+  -webkit-flex-wrap: @Wrap;
+  -moz-flex-wrap: @Wrap;
+  -ms-flex-wrap: @Wrap;
+  flex-wrap: @Wrap;
 }
 
 
@@ -403,11 +482,11 @@
   transition-delay: @arguments;
 }
 
-.TransitionDuration (@Duration: @TransitionDuration) {
-  -webkit-transition-duration: @Duration;
-  -moz-transition-duration: @Duration;
-  -o-transition-duration: @Duration;
-  transition-duration: @Duration;
+.TransitionDuration (...) {
+  -webkit-transition-duration: @arguments;
+  -moz-transition-duration: @arguments;
+  -o-transition-duration: @arguments;
+  transition-duration: @arguments;
 }
 
 .TransitionProperty (...) {
@@ -431,20 +510,26 @@
   perspective: @Value;
 }
 
-.Rotation (@Deg: @RotationDeg) {
-  .Transform(rotate(@Deg));
+.Rotation (...) {
+  .Transform(rotate(@arguments));
 }
-.Scale (@Ratio: @ScaleRatio){
-  .Transform(scale(@Ratio));
+.Scale (...){
+  .Transform(scale(@arguments));
 }
 .Skew (@RotationDeg, @RotationDeg2) {
   .Transform(skew(@RotationDeg, @RotationDeg2));
+}
+.SkewY (...) {
+  .Transform(skewY(@arguments));
+}
+.SkewX (...) {
+  .Transform(skewX(@arguments));
 }
 .Translate (@X:0, @Y:0) {
   .Transform(translate(@X, @Y));
 }
 .Translate3D (@X:0, @Y:0, @Z: 0) {
-  .Transform(translate(@X, @Y, @Z));
+  .Transform(translate3d(@X, @Y, @Z));
 }
 
 
